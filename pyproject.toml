@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "ppvid"
+version = "0.1.0"
+description = "Tools tools to post processes video lectures."
+authors = ["sjvrensburg <sjansevanrensburg@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+unsilence = "^1.0.8"
+ffmpeg-python = "^0.2.0"
+matchering = "^2.0.3"
+click = "^8.0.1"
+pyloudnorm = "^0.1.0"
+SoundFile = "^0.10.3"
+pydub = "^0.25.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+speed_up = 'ppvid.cli:speed_up'
+master_video = 'ppvid.cli:master_video'
+convert4lecture = 'ppvid.cli:convert4lecture'
